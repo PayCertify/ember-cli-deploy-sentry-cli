@@ -76,7 +76,7 @@ module.exports = {
           `SENTRY_AUTH_TOKEN=${authToken} ` +
           `SENTRY_PROJECT=${appName} ` +
           `sentry-cli ${command}`
-        ).trim();
+        );
       },
 
       _exec(command = '') {
