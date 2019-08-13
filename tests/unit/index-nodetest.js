@@ -152,7 +152,7 @@ describe('sentry-cli', function() {
         'SENTRY_ORG=my-org ' +
         'SENTRY_AUTH_TOKEN=my-auth-token ' +
         'SENTRY_PROJECT=my-project ' +
-        'sentry-cli releases new my-project@v1.0.0@1234567');
+        'node_modules/.bin/sentry-cli releases new my-project@v1.0.0@1234567');
     });
 
     it('sets related commits', function() {
@@ -167,7 +167,7 @@ describe('sentry-cli', function() {
         'SENTRY_ORG=my-org ' +
         'SENTRY_AUTH_TOKEN=my-auth-token ' +
         'SENTRY_PROJECT=my-project ' +
-        'sentry-cli releases set-commits --auto my-project@v1.0.0@1234567');
+        'node_modules/.bin/sentry-cli releases set-commits --auto my-project@v1.0.0@1234567');
     });
 
     it('uploads source maps', function() {
@@ -182,7 +182,7 @@ describe('sentry-cli', function() {
         'SENTRY_ORG=my-org ' +
         'SENTRY_AUTH_TOKEN=my-auth-token ' +
         'SENTRY_PROJECT=my-project ' +
-        'sentry-cli releases files my-project@v1.0.0@1234567 upload-sourcemaps --rewrite my-dest-dir/assets');
+        'node_modules/.bin/sentry-cli releases files my-project@v1.0.0@1234567 upload-sourcemaps --rewrite my-dest-dir/assets');
     });
 
     it('saves release', function() {
@@ -197,7 +197,7 @@ describe('sentry-cli', function() {
         'SENTRY_ORG=my-org ' +
         'SENTRY_AUTH_TOKEN=my-auth-token ' +
         'SENTRY_PROJECT=my-project ' +
-        'sentry-cli releases finalize my-project@v1.0.0@1234567');
+        'node_modules/.bin/sentry-cli releases finalize my-project@v1.0.0@1234567');
     });
   });
 
@@ -214,7 +214,7 @@ describe('sentry-cli', function() {
         'SENTRY_ORG=my-org ' +
         'SENTRY_AUTH_TOKEN=my-auth-token ' +
         'SENTRY_PROJECT=my-project ' +
-        'sentry-cli releases deploys my-project@v1.0.0@1234567 new -e my-production');
+        'node_modules/.bin/sentry-cli releases deploys my-project@v1.0.0@1234567 new -e my-production');
     });
   });
 
@@ -231,7 +231,7 @@ describe('sentry-cli', function() {
         'SENTRY_ORG=my-org ' +
         'SENTRY_AUTH_TOKEN=my-auth-token ' +
         'SENTRY_PROJECT=my-project ' +
-        'sentry-cli releases delete my-project@v1.0.0@1234567');
+        'node_modules/.bin/sentry-cli releases delete my-project@v1.0.0@1234567');
     });
   });
 });

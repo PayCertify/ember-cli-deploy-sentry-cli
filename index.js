@@ -75,12 +75,12 @@ module.exports = {
           `SENTRY_ORG=${orgName} ` +
           `SENTRY_AUTH_TOKEN=${authToken} ` +
           `SENTRY_PROJECT=${appName} ` +
-          `sentry-cli ${command}`
+          `node_modules/.bin/sentry-cli ${command}`
         );
       },
 
       _exec(command = '') {
-        return execSync(command);
+        return execSync(command, { cwd: this.project.root });
       }
     });
 
