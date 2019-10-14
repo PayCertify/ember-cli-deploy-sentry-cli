@@ -31,8 +31,7 @@
       "release": true
     },
     "hooks": {
-      "before:init": "npm run lint && npm test",
-      "after:release": "ember deploy production"
+      "before:init": "npm run lint && npm test"
     }
   },
   "peerDependencies": {
