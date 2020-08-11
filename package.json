@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-sentry-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Sentry CLI integration for ember-cli-deploy",
   "keywords": [
     "ember-addon",
@@ -47,7 +47,7 @@
     "chai": "^4.2.0",
     "eslint": "^6.5.1",
     "mocha": "^8.0.1",
-    "release-it": "^13.6.4",
+    "release-it": "^13.6.6",
     "sinon": "^7.5.0"
   },
   "engines": {
