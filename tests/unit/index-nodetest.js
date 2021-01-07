@@ -109,6 +109,22 @@ describe('sentry-cli', function() {
       });
     });
 
+    describe('optional requires configuration', function() {
+      it('it not set ignoreAssigningCommits property', function() {
+        assert.isUndefined(this.context.config['sentry-cli'].ignoreAssigningCommits, 'not required config: `ignoreAssigningCommits`');
+      });
+
+      it('it set ignoreAssigningCommits property', function() {
+        const plugin = Plugin.createDeployPlugin({ name: 'sentry-cli' });
+
+        this.context.config['sentry-cli'].ignoreAssigningCommits = true;
+
+        plugin.beforeHook(this.context);
+
+        assert.isTrue(this.context.config['sentry-cli'].ignoreAssigningCommits, 'it set required config: `ignoreAssigningCommits` as true value');
+      });
+    });
+
     describe('has default config', function() {
       it('assetsDir', function() {
         const plugin = Plugin.createDeployPlugin({ name: 'sentry-cli' });

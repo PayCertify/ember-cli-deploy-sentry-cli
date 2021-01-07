@@ -35,8 +35,14 @@ module.exports = {
         this.log('SENTRY: Creating release...');
         this.sentryCliExec(`releases new ${releaseName}`);
 
-        this.log('SENTRY: Assigning commits...');
-        this.sentryCliExec(`releases set-commits --auto ${releaseName}`);
+        const ignoreAssigningCommits = this.readConfig('ignoreAssigningCommits');
+
+        if (ignoreAssigningCommits) {
+          this.log('SENTRY: Assigning commits...[IGNORED]');
+        } else {
+          this.log('SENTRY: Assigning commits...');
+          this.sentryCliExec(`releases set-commits --auto ${releaseName}`);
+        }
 
         this.log('SENTRY: Uploading source maps...');
         this.sentryCliExec(`releases files ${releaseName} upload-sourcemaps --rewrite ${assetsDir}`);
