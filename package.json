@@ -46,7 +46,7 @@
     "@paycertify/eslint-plugin": "github:paycertify/eslint-plugin#v0.8.0",
     "chai": "^4.2.0",
     "eslint": "^6.5.1",
-    "mocha": "^8.0.1",
+    "mocha": "^9.0.2",
     "release-it": "^14.2.2",
     "sinon": "^9.2.3"
   },
